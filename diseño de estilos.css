@@ -50,6 +50,7 @@ body {
     bottom: 10px; /* Distancia desde la parte inferior */
     right: 10px; /* Distancia desde el lado derecho */
     max-width: 100%; /* Hace que el logo se ajuste al tamaño de la pantalla */
+    size: 50px;
     height: auto; /* Mantiene la proporción original del logo */
     width: auto; /* Deja que el ancho del logo se ajuste automáticamente */
 }
