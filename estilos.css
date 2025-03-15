@@ -1,0 +1,208 @@
+body {
+    background-color: #92acab;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajuste de la barra de recordatorio */
+.recordatorio {
+    color: #efece1;
+    font-size: 2em;
+    margin-top: 20px;  /* Ajuste de margen para móviles */
+    text-align: center;
+}
+
+/* Contenedor de frases */
+.resolution {
+    text-align: center;
+    margin-top: 60px;  /* Ajuste de margen para que no quede pegado al top */
+    width: 100%;
+    font-size: 20px;
+}
+
+.frase-contenedor {
+    display: inline-block;
+    background-color: #709eae;
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: 4px 6px 14px rgba(1, 1, 1, 0.30);
+    margin: 10px;
+    width: 100%;  /* Aseguramos que ocupe el 100% del ancho disponible */
+    max-width: 80%; /* Limitamos el tamaño máximo */
+    word-wrap: break-word;
+    overflow: hidden;
+    text-align: left;
+}
+
+.frase-contenedor a {
+    display: block;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.frase_pc, .frase_tablets, .frase_moviles {
+    font-size: 1.5em;
+    color: #efece1;
+}
+
+/* Ajustes de imagenes */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ajustar las imágenes y logotipos */
+.logo, .logo-celular {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    max-width: 80%;  /* Logotipos más pequeños en dispositivos móviles */
+    height: auto;
+    z-index: 1000;
+}
+
+.linares, .pastoral {
+    position: relative;
+    width: 100%;
+    max-width: 200px;  /* Limitamos el ancho de las imágenes */
+    margin-top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.linares img, .pastoral img {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.btn-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 70%;  /* Reducir tamaño en móviles */
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.0);
+    border: none;
+    color: #fff;
+    font-size: 14px; /* Ajustar tamaño de fuente */
+    text-align: center;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: normal;
+    font-weight: bold;
+}
+
+.btn-overlay:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.frase-contenedor {
+    font-size: 5vw;  /* Ajusta el tamaño de la fuente a un porcentaje del ancho de la ventana */
+    line-height: 1.5;  /* Ajuste para mejorar la legibilidad */
+}
+
+
+/* Media queries para pantallas grandes */
+@media screen and (min-width: 1024px) {
+    .desktop {
+        display: block;
+    }
+    .tablet, .movil {
+        display: none;
+    }
+
+    .logo-celular {
+        display: none;
+    }
+
+    .frase-contenedor {
+        font-size: 1.8em;
+        margin-top: 60px;
+    }
+
+    .recordatorio {
+        font-size: 2.5em;
+    }
+}
+
+/* Media queries para tablets */
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    .tablet {
+        display: block;
+    }
+
+    .logo-celular {
+        display: none;
+    }
+
+    .desktop, .movil {
+        display: none;
+    }
+
+    .frase-contenedor {
+        margin-top: 60px;
+        padding: 5px;
+    }
+
+    .recordatorio {
+        font-size: 2.8em;
+        margin-top: 100px;
+    }
+
+    .linares, .pastoral {
+        max-width: 350px;
+    }
+
+    .btn-overlay {
+        font-size: 25px;
+    }
+}
+
+/* Media queries para móviles */
+@media screen and (max-width: 599px) {
+    .movil {
+        display: block;
+    }
+    .desktop, .tablet {
+        display: none;
+    }
+
+    .frase-contenedor {
+        font-size: 0.7em;  /* Ajustar tamaño de la fuente */
+        padding: 10px;
+        margin-top: -30px;
+    }
+
+    .recordatorio {
+        font-size: 1.6em;  /* Ajustamos el tamaño de la fuente */
+        margin-top: 25px; /* Ajuste de margen */
+        right: 30%;
+    }
+
+    .logo-celular {
+        display: block;
+        top: 89%;
+        right: 5%;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .linares, .pastoral {
+        width: 90%;  /* Hacemos las imágenes más grandes */
+        margin-top: 25px;
+    }
+
+    .btn-overlay {
+        font-size: 20px;  /* Ajuste para un mejor tamaño de fuente en móviles */
+    }
+}
