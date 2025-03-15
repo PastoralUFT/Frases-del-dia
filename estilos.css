@@ -1,0 +1,211 @@
+body {
+    background-color: #92acab;
+    margin: 0;
+    padding: 0;
+}
+
+.recordatorio {
+    color: #efece1;
+    font-size: 2em;
+    margin-top: 100px;
+    text-align: center;
+}
+
+/* Contenedor de frases */
+.resolution {
+    text-align: center;
+    margin-top: 105px;
+    width: 100%;
+    font-size: 20px;
+}
+
+.frase-contenedor {
+    display: inline-block;
+    background-color: #709eae;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 6px 14px rgba(1, 1, 1, 0.30);
+    margin: 10px;
+    max-width: 90%;
+    width: auto;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-align: left;
+}
+
+.frase-contenedor a {
+    display: block;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.frase_pc, .frase_tablets, .frase_moviles {
+    font-size: 1.5em;
+    color: #efece1;
+}
+
+.logo {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.logo-celular {
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.linares {
+    position: relative;
+    width: 250px; /* Ancho actualizado para la nueva imagen */
+    height: 100px; /* Alto actualizado para la nueva imagen */
+    margin-top: 80px;
+    left: 15px;
+}
+
+/* Imagen con opacidad */
+.linares img {
+    position: relative;
+    width: 100%; /* La imagen ocupará todo el espacio disponible */
+    height: 100%; /* Mantendrá la proporción con el tamaño actualizado */
+    opacity: 0.7; /* Ajuste de opacidad */
+    transition: opacity 0.3s ease;
+}
+
+/* Esta configurado para celular, hay que cambiarlo para pc y tablet */
+.btn-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0; /* Elimine el padding grande */
+    width: 80%;
+    height: 40%;
+    background-color: rgba(255, 255, 255, 0.0); /* Fondo transparente */
+    border: none;
+    color: #fff;
+    font-size: 20px; /* Ajusta el tamaño de la fuente */
+    text-align: center; /* Centra el texto */
+    line-height: 1.2; /* Ajusta la altura de las líneas */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: normal; /* Permite que el texto se ajuste */
+    font-weight: bold; /* Hace la letra enegrece */
+}
+
+.btn-overlay:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.pastoral {
+    position: relative;
+    width: 250px;
+    height: 100px;
+    margin-top: 30px;
+    left: 15px;
+}
+
+.pastoral img {
+    position: relative;
+    width: 100%; /* La imagen ocupará todo el espacio disponible */
+    height: 100%; /* Mantendrá la proporción con el tamaño actualizado */
+    opacity: 0.7; /* Ajuste de opacidad */
+    transition: opacity 0.3s ease;
+}
+
+/* Media queries para pantallas de escritorio */
+@media screen and (min-width: 1024px) {
+    .desktop {
+        display: block;
+    }
+    .tablet, .movil {
+        display: none;
+    }
+
+    .frase-contenedor {
+        font-size: 1.8em;
+        margin-top: 70px;
+    }
+
+    .recordatorio {
+        font-size: 2.5em;
+    }
+
+    .logo {
+        max-width: 500px;
+        height: auto;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .logo-celular {
+        display: none;
+    }
+}
+
+/* Media queries para tablets */
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    .tablet {
+        display: block;
+    }
+    .desktop, .movil {
+        display: none;
+    }
+
+    .frase-contenedor {
+        font-size: 40px;
+        margin-top: 70px;
+    }
+
+    .recordatorio {
+        font-size: 50px;
+        margin-top: 160px;
+    }
+
+    .logo {
+        max-width: 500px;
+        height: auto;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .logo-celular {
+        display: none;
+    }
+}
+
+/* Media queries para móviles */
+@media screen and (max-width: 599px) {
+    .movil {
+        display: block;
+    }
+    .desktop, .tablet {
+        display: none;
+    }
+
+    .frase-contenedor {
+        font-size: 1.2em;
+    }
+
+    .recordatorio {
+        font-size: 30px;
+        margin-top: 160px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logo-celular {
+        max-width: 500px;
+        height: auto;
+    }
+}
