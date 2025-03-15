@@ -57,7 +57,7 @@ function ajustarTamanoFuente(frase) {
 
     // Tamaño máximo de la fuente para frases cortas
     const tamanoMaximo = 5; // Unidades en vw para frases cortas
-    const tamanoMinimo = 3; // Unidades en vw para frases largas
+    const tamanoMinimo = 4; // Unidades en vw para frases largas
     const longitudMaxima = 60; // Umbral para considerar que una frase es "larga"
 
     // Calculamos el tamaño de la fuente basado en la longitud de la frase
