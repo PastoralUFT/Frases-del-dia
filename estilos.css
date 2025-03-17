@@ -63,7 +63,7 @@ img {
     z-index: 1000;
 }
 
-.linares, .pastoral {
+.instagram, .pastoral {
     position: relative;
     width: 100%;
     max-width: 200px;  /* Limitamos el ancho de las imágenes */
@@ -75,7 +75,7 @@ img {
     text-overflow: ellipsis;
 }
 
-.linares img, .pastoral img {
+.instagram img, .pastoral img {
     opacity: 0.7;
     transition: opacity 0.3s ease;
 }
