@@ -100,9 +100,6 @@ img {
     font-weight: bold;
 }
 
-.btn-overlay:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-}
 
 .frase-contenedor {
     font-size: 5vw;  /* Ajusta el tamaño de la fuente a un porcentaje del ancho de la ventana */
