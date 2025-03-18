@@ -63,7 +63,7 @@ img {
     z-index: 1000;
 }
 
-.instagram, .pastoral, .actividad_1 {
+.instagram, .pastoral, .actividad_1, .actividad_2 {
     position: relative;
     width: 100%;
     max-width: 200px;  /* Limitamos el ancho de las imágenes */
@@ -75,7 +75,7 @@ img {
     text-overflow: ellipsis;
 }
 
-.instagram img, .pastoral img, .actividad_1 img {
+.instagram img, .pastoral img, .actividad_1 img, .actividad_2 img {
     opacity: 0.7;
     transition: opacity 0.3s ease;
 }
@@ -157,7 +157,7 @@ img {
         margin-top: 100px;
     }
 
-    .instagram, .pastoral, .actividad_1 {
+    .instagram, .pastoral, .actividad_1, .actividad_2 {
         max-width: 350px;
     }
 
@@ -197,7 +197,7 @@ img {
         display: none;
     }
 
-    .instagram, .pastoral, .actividad_1 {
+    .instagram, .pastoral, .actividad_1, .actividad_2 {
         width: 90%;  /* Hacemos las imágenes más grandes */
         margin-top: 25px;
     }
