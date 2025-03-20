@@ -63,7 +63,7 @@ img {
     z-index: 1000;
 }
 
-.instagram, .pastoral, .actividad_1, .actividad_2 {
+.instagram, .pastoral {
     position: relative;
     width: 100%;
     max-width: 200px;  /* Limitamos el ancho de las imágenes */
@@ -75,12 +75,32 @@ img {
     text-overflow: ellipsis;
 }
 
-.instagram img, .pastoral img, .actividad_1 img, .actividad_2 img {
+.instagram img, .pastoral img {
     opacity: 0.7;
     transition: opacity 0.3s ease;
 }
 
 .btn-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 70%;  /* Reducir tamaño en móviles */
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.0);
+    border: none;
+    color: #fff;
+    font-size: 14px; /* Ajustar tamaño de fuente */
+    text-align: center;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: normal;
+    font-weight: bold;
+}
+
+.btn-info {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -106,6 +126,96 @@ img {
     line-height: 1.5;  /* Ajuste para mejorar la legibilidad */
 }
 
+/* Modal - Estilo general */
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+}
+
+/* Contenido del modal */
+.modal-contenido {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10% auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Botón de Cerrar */
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Carrusel */
+.carrusel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.cuadro {
+    flex: 0 0 100%;
+    text-align: center;
+    display: none; /* Inicialmente los cuadros están ocultos */
+}
+
+.cuadro img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cuadro p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.cuadro .btn-enlace {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #070101;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.flecha.izquierda {
+    left: 10px;
+}
+
+.flecha.derecha {
+    right: 10px;
+}
+
+.carrusel p {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.carrusel p1 {
+    font-size: 18px;
+}
 
 /* Media queries para pantallas grandes */
 @media screen and (min-width: 1024px) {
@@ -194,12 +304,16 @@ img {
         display: none;
     }
 
-    .instagram, .pastoral, .actividad_1, .actividad_2 {
+    .instagram, .pastoral {
         width: 90%;  /* Hacemos las imágenes más grandes */
         margin-top: 25px;
     }
 
     .btn-overlay {
         font-size: 20px;  /* Ajuste para un mejor tamaño de fuente en móviles */
+    }
+
+    .btn-info {
+        font-size: 20px;
     }
 }
