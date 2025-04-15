@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Frases del día</title>
+</head>
+
+<body>
+      <!-- Nuevo botón -->
+    <div class="boton-frase">
+      <button id="mostrarFraseBtn">Obtén tu frase del día</button>
+    </div>
+<main>
+    <div class="resolution">
+        <div class="desktop">
+            <div class="frase-contenedor">
+                <a class="frase_pc" id="frase"></a>
+            </div>
+        </div>
+        <div class="tablet">
+            <div class="frase-contenedor">
+                <a class="frase_tablets" id="frase"></a>
+            </div>
+        </div>
+        <div class="movil">
+            <div class="frase-contenedor">
+                <a class="frase_moviles" id="frase"></a>
+            </div>
+        </div>
+        <div class="logo">
+            <a href="https://www.instagram.com/pastoral.finis/?hl=es-la">
+                <img src="Logo pc y tablet.png" alt="Logo Universidad">
+            </a>
+        </div>
+        <div class="logo-celular">
+            <a href="https://www.instagram.com/pastoral.finis/?hl=es-la">
+                <img src="Dirección-de-Pastoral-BLANCO (1) (1).png" alt="Logo Universidad">
+            </a>
+        </div>
+    </div>
+    <div class="contenedor-imagenes-botones">
+      <div class="imagen-boton instagram">
+        <img src="instagram.jpg" alt="Instagram">
+        <a href="https://www.instagram.com/pastoral.finis/?hl=es-la" target="_blank">
+          <button class="btn-overlay">Nuestro Instagram</button>
+        </a>
+      </div>
+      <div class="imagen-boton pastoral">
+        <img src="pastoral.jpg" alt="Pastoral">
+        <button id="openModalBtn" class="btn-info">Más Información</button>
+      </div>
+    </div>
+    
+</main>
+    <script src="index.js"></script>
+</body>
+
+</html>
