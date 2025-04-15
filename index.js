@@ -77,22 +77,6 @@ function ajustarTamanoFuente(frase) {
     });
 }
 
-// Modal y el botón para abrirlo
-document.addEventListener('DOMContentLoaded', () => {
-    const openModalBtn = document.getElementById('openModalBtn');
-    const modalElement = document.getElementById('exampleModalToggle');
-
-    if (openModalBtn && modalElement) {
-        const modal = new bootstrap.Modal(modalElement);
-        
-        openModalBtn.addEventListener('click', () => {
-            modal.show();
-        });
-    }
-});
-
-
-
 window.onload = obtenerFraseDelDia;
 
 document.addEventListener('DOMContentLoaded', () => {
